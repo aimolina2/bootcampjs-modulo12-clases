@@ -32,4 +32,12 @@ Pasamos los resultados por consola.
 
 # CASO 2. Caso de un touroperador
 
+Creamos la `class ReservaTourOperador` partiendo de la clase anterior de particular y le añadimos el descuento. En el constructor hacemos uso de `super(reservas)` para indicar que ese descuento = 0.85 (directamente hacemos la cuenta del 15% para multiplicar más fácilmente a la hora de aplicar el descuento).
+
+Modificamos los precios por habitación y para calcular el subTotal machacamos la funcion que teniamos anteriormente y simplemente multiplicamos por el descuento.
+
+Pasamos los resultados por consola.
+
+<img src=images/caso-2.png alt="caso 1">
+
 # DESAFÍO
