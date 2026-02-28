@@ -38,6 +38,14 @@ Modificamos los precios por habitación y para calcular el subTotal machacamos l
 
 Pasamos los resultados por consola.
 
-<img src=images/caso-2.png alt="caso 1">
+<img src=images/caso-2.png alt="caso 2">
 
 # DESAFÍO
+
+Aqui prácticamente hacemos lo mismo que antes, solo que en este caso creamos una primera `class ReservaHotel`, para después:
+
+- Crear la clase hija `class ReservaDeParticular`, donde con `super` llamamos a las propiedades de esa primera clase.
+- Crear la clase hija `class ReservaDeTourOperador`, donde volvemos a llamar a las propiedades y añadir la del descuento. Además machacamos el precio de las habitaciones y en el subtotal hacemos que se multiplique por el descuento para conseguir el precio que necesitamos.
+
+Comprobamos que nos da los resultados esperados:
+<img src=images/desafio.png alt="desafio">
