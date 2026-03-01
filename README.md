@@ -9,11 +9,11 @@ Pasos:
 - Ejecuta el sandbox con `npm run dev`.
 - Abre el navegador en `http://localhost:5173/` (si ese puerto no te funciona, mira en la consola donde has hecho el build, puede que este ocupado y se haya abierto en otro puerto).
 
-En este módulo se presentan dos casos (Caso 1 y Caso 2), que resolvemos en el fichero `main.ts`, y un desafío, que completamos en el archivo `desafio.ts`.
+En este módulo se presentan dos casos (Caso 1 y Caso 2), que resolvemos en el fichero `main.ts`, y un desafío, que completamos en el archivo `desafio.ts`. Además de añadir un `ejercicio-adicional.ts`.
 
 Todos los resultados se mostrarán por consola desde el index.html del proyecto.
 
-# CASO 1. Caso de un cliente particular
+## CASO 1. Caso de un cliente particular
 
 Volcamos la info facilitada en el ejercicio (interface y reservas) en el archivo `main.ts``
 
@@ -30,7 +30,7 @@ Pasamos los resultados por consola.
 
 <img src=images/caso-1.png alt="caso 1">
 
-# CASO 2. Caso de un touroperador
+## CASO 2. Caso de un touroperador
 
 Creamos la `class ReservaTourOperador` partiendo de la clase anterior de particular y le añadimos el descuento. En el constructor hacemos uso de `super(reservas)` para indicar que ese descuento = 0.85 (directamente hacemos la cuenta del 15% para multiplicar más fácilmente a la hora de aplicar el descuento).
 
@@ -40,7 +40,7 @@ Pasamos los resultados por consola.
 
 <img src=images/caso-2.png alt="caso 2">
 
-# DESAFÍO
+## DESAFÍO
 
 Aqui prácticamente hacemos lo mismo que antes, solo que en este caso creamos una primera `class ReservaHotel`, para después:
 
@@ -49,3 +49,19 @@ Aqui prácticamente hacemos lo mismo que antes, solo que en este caso creamos un
 
 Comprobamos que nos da los resultados esperados:
 <img src=images/desafio.png alt="desafio">
+
+## EJERCICIO ADICIONAL
+
+Lo visualizamos desde la consola del index.html. Como en el archivo entraban en conflicto algunas de las declaraciones hemos colocado un `export{}` al final del fichero `ejercicio-adicional.ts` para liberarlas, ya que no queremos compartir los datos en este ejercicio, sino volver a usarlos pero duplicando el contenido.
+
+Para este ejercicio seguimos la misma estructura que en el ejercicio de DESAFÍO. Creamos la clase, donde fijamos el precio del desayuno.
+
+Para sacar el subTotal de las reservas de Particular debemos tener en cuenta que si hay desayuno debemos de: precio de desayuno _ persona _ noche y si no el desayuno = 0. Con esto claro solo queda sumar precio (según tipo de habitación) \* nº noches + precio adicional siempre que se tengamos más de 1 persona + precio desayuno.
+
+Para el total sumamos el IVA.
+
+Para la reserva de TourOperador añadimos el descuento e igualamos el precio de los tipos de habitacion. En el subTotal aplicamos el descuento.
+
+Comprobamos el resultado.
+
+<img src=images/ej-extra.png alt="ejercicio adicional">
